@@ -1,0 +1,24 @@
+ */
+package aula10bb;
+import javax.swing.JOptionPane;
+
+
+
+public class Aula10bb {
+
+    public static void main(String[] args) {
+        String limiteString = JOptionPane.showInputDialog(null, "Digite o limite para impreção da sequência", "Contagem", 1);
+        int limite = Integer.parseInt(limiteString);
+        int contador = 0;
+        String msg = ""; // armazena contador 
+        
+        while (contador <= limite ) {
+            msg = msg + contador + ", "; // conversão implícita 
+            if (contador % 10 == 0 && contador != 0) {
+                msg = msg + "\n";
+            }
+            contador++;
+        }
+        JOptionPane.showMessageDialog(null, msg, "Contagem", 1);
+    }
+    
